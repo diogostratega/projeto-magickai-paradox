@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ParadoxTCG</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="./src/css/reset.css">
+    <link rel="stylesheet" href="./src/css/estilos.css">
+    <link rel="stylesheet" href="./src/css/responsivo.css">
+</head>
+
+<body>
+    <header class="cabecalho">
+        <img src="src/img/logo-paradox.png" alt="Logo ParadoxTCG" class="logo">
+    </header>
+
+    <main class="container">
+        <h1 class="produtos">PRODUTOS</h1>
+        <div class="filtros">
+            <div class="categorias-cartas">
+                <label for="categoria">Raridade</label>
+                <select id="categoria" class="categoria">
+                    <option value="">Selecione uma Raridade</option>
+                    <option value="bronze">Bronze</option>
+                    <option value="prata">Prata</option>
+                    <option value="ouro">Ouro</option>
+                    <option value="paradox">Paradox</option>
+                </select>
+            </div>
+            <div class="preco-cartas">
+                <label for="preco">Preço Máximo (R$)</label>
+                <input type="text" id="preco" class="preco" placeholder="EX.: 300">
+            </div>
+            <button class="btn-filtrar">Aplicar Filtro</button>
+        </div>
+        <ul class="cartas">
+            <li class="carta" data-categoria="ouro" data-preco="110">
+                <img src="src/img/carta-juiz.png" alt="Juiz">
+
+                <div class="informacoes">
+                    <h2 class="nome-personagem">Juiz Solar Celestial</h2>
+                    <span class="categoria">Raridade: Ouro</span>
+                    <span class="preco">R$ 110,00</span>
+                    <a href="http://wa.me/5581988865200?text=Ei boy, o Juiz brabo esta disponível?" class="btn-comprar"
+                        target="_blank">Comprar</a>
+                </div>
+            </li>
+
+            <li class="carta" data-categoria="paradox" data-preco="759.9">
+                <img src="src/img/carta-juiz-negativo.png" alt="Juiz-Negativo">
+
+                <div class="informacoes">
+                    <h2 class="nome-personagem">Juiz Negro Universal</h2>
+                    <span class="categoria">Raridade: Paradox</span>
+                    <span class="preco">R$ 759,90</span>
+                    <a href="http://wa.me/5581988865200?text=Ei boy, o Juiz brabo espectrado esta disponível?"
+                        class="btn-comprar" target="_blank">Comprar</a>
+                </div>
+            </li>
+
+            <li class="carta" data-categoria="prata" data-preco="11.06">
+                <img src="src/img/carta-general.png" alt="General">
+
+                <div class="informacoes">
+                    <h2 class="nome-personagem">General Medieval</h2>
+                    <span class="categoria">Raridade: Prata</span>
+                    <span class="preco">R$ 11,06</span>
+                    <a href="http://wa.me/5581988865200?text=Oi, a carta General esta disponível?" class="btn-comprar"
+                        target="_blank">Comprar</a>
+                </div>
+            </li>
+
+            <li class="carta" data-categoria="bronze" data-preco="1.6">
+                <img src="src/img/carta-arqueiro.png" alt="Arqueiro">
+
+                <div class="informacoes">
+                    <h2 class="nome-personagem">Arqueiro Ágil</h2>
+                    <span class="categoria">Raridade: Bronze</span>
+                    <span class="preco">R$ 1,60</span>
+                    <a href="http://wa.me/5581988865200?text=Oi, aquele arqueiro genérico esta disponível?"
+                        class="btn-comprar" target="_blank">Comprar</a>
+                </div>
+            </li>
+
+            <li class="carta" data-categoria="bronze" data-preco="6.98">
+                <img src="src/img/carta-cavaleiro.png" alt="Cavaleiro">
+
+                <div class="informacoes">
+                    <h2 class="nome-personagem">Cavaleiro Valente</h2>
+                    <span class="categoria">Raridade: Bronze</span>
+                    <span class="preco">R$ 6,98</span>
+                    <a href="http://wa.me/5581988865200?text=Oi, o cavaleiro genérico esta disponível?"
+                        class="btn-comprar" target="_blank">Comprar</a>
+                </div>
+            </li>
+
+            <li class="carta" data-categoria="bronze" data-preco="9.999">
+                <img src="src/img/carta-curandeira.png" alt="Sacerdotisa">
+
+                <div class="informacoes">
+                    <h2 class="nome-personagem">Sarcedotisa Curandeira</h2>
+                    <span class="categoria">Raridade: Bronze</span>
+                    <span class="preco">R$ 9,999</span>
+                    <a href="http://wa.me/5581988865200?text=Oi, a carta da waifu que vai virar a Miku esta disponível?"
+                        class="btn-comprar" target="_blank">Comprar</a>
+                </div>
+            </li>
+        </ul>
+    </main>
+
+    <footer class="rodape">@2025 - Todos os Direitos Reservados</footer>
+    <script src="./src/js/index.js"></script>
+</body>
+
+</html>
