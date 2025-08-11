@@ -1,0 +1,5 @@
+# Ignorar arquivos do VSCode
+.vscode/
+*.sqlite
+*.json
+*.wsuo
