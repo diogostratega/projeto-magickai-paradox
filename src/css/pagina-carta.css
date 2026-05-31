@@ -1,7 +1,7 @@
 .pagina-carta {
     max-width: 1200px;
     margin: 50px auto;
-    padding: 0 20px;
+    padding: 20px;
 
     display: flex;
     gap: 50px;
@@ -15,10 +15,6 @@
     max-width: 500px;
     border-radius: 15px;
     transition: .3s;
-}
-
-.imagem-carta img:hover {
-    transform: scale(1.03);
 }
 
 .detalhes-carta {
@@ -58,7 +54,7 @@
 .btn-comprar {
     text-decoration: none;
     padding: 12px 20px;
-    border-radius: 8px;
+    border-radius: 9px;
     color: white;
     font-weight: bold;
 }
@@ -69,4 +65,8 @@
 
 .btn-comprar {
     background-color: #6f2dbd;
+}
+
+.btn-voltar:hover, .btn-comprar:hover{
+        background-color: #33008F;
 }
