@@ -12,7 +12,7 @@ const botaoFiltrar = (document.querySelector('.btn-filtrar'));
 
 // passo 2 - escutar o clique no botão de aplicar filtros
 botaoFiltrar.addEventListener('click', function () {
-    // passo 3 0 pegar os valores dos campos de categoria e preco
+    // passo 3 - pegar os valores dos campos de categoria e preco
     const categoriaSelecionada = document.querySelector('#categoria').value;
     const precoMaximoSelecionado = document.querySelector('#preco').value;
 
@@ -26,7 +26,11 @@ botaoFiltrar.addEventListener('click', function () {
         let mostrarCarta = true;
 
         const temFiltroDeCategoria = categoriaSelecionada !== '';
-        const cartaNaoBateComFiltroDeCategoria = categoriaSelecionada.toLowerCase() !== categoriaCarta.toLowerCase();
+
+        const categoriasCarta = categoriaCarta.toLowerCase().split(' ');
+
+        const cartaNaoBateComFiltroDeCategoria =
+            !categoriasCarta.includes(categoriaSelecionada.toLowerCase());
 
         if (temFiltroDeCategoria && cartaNaoBateComFiltroDeCategoria) {
             mostrarCarta = false;

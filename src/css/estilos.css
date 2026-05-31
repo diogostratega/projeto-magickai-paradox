@@ -100,6 +100,12 @@ body {
 .container .carta img{
     width: 100%;
     padding: 20px;
+        cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.container .carta img:hover {
+    transform: scale(1.03);
 }
 
 .container .carta .informacoes{
