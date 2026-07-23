@@ -4,156 +4,113 @@ body {
 
 .cabecalho {
     background-color: #0E0027;
-    display: flex;
-    justify-content: center;
-    padding-top: 10px;
-    margin-bottom: 60px;
-    height: 60px;
+    min-height: 72px;
+    padding: 10px 24px;
 }
 
-.cabecalho .logo{
+.cabecalho .menu-navegacao{
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+}
+
+.cabecalho .menu-navegacao .logo{
     height: 50px;
 }
 
-.container{
-    max-width: 1170px;
-    margin: 0 auto;
+.cabecalho .menu-navegacao .menu{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 28px;
 }
 
-.container .produtos{
+.cabecalho .menu-navegacao .menu a{
+    color: #EDEDED;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 0;
+    transition: 0.15s;
+}
+
+.cabecalho .menu-navegacao .menu a:hover{
     color: #6528D3;
-    font-size: 24px;
-    font-weight: 500;
-    margin-bottom: 32px;
-    line-height: 32px;
-    letter-spacing: 2px;
 }
 
-.container .filtros{
+.cabecalho .menu-navegacao .form-pesquisa{
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin-bottom: 32px;
+    flex: 1;
+    max-width: 420px;
 }
 
-.container .categorias-cartas, .container .preco-cartas{
-    display: flex;
-    flex-direction: column;
-    width: 40%;
-}
+.cabecalho .menu-navegacao .form-pesquisa input {
+    width: 100%;
+    padding: 9px;
 
-.container label{
-    letter-spacing: 2px;
-    font-weight: 500;
-    color: #6528D3
-}
+    border: 3px solid #6528D3;
+    border-right: none;
+    border-radius: 2px 0 0 2px;
 
-.container .categorias-cartas select, .container .preco-cartas input{
-    padding: 16px 13px;
-    border-radius: 2px;
-    border: 2px solid #6528D3;
     background-color: #F2EEFA;
     color: #130234;
-    height: 52px;
 }
 
-.container select:focus, 
-.container input:focus, 
-.container select:focus-visible,
-.container input:focus-visible{
+.cabecalho .form-pesquisa input:focus {
     outline: none;
+    border-color: #9C6BEE;
 }
 
-.container .filtros .categoria{
-    appearance: none;
-    background: url(../img/seta-para-baixo.png) 97% center no-repeat;
-}
+.cabecalho .menu-navegacao .form-pesquisa button {
+    padding: 9px 16px;
+    border: 2px solid #6528D3;
+    border-radius: 0 2px 2px 0;
 
-.container .filtros .btn-filtrar{
-    border: none;
-    background-color: #6528B3;
-    color: #EDEDED;
-    padding: 16px 32px;
+    background-color: #6528D3;
+    color: #FFFFFF;
+
     font-weight: 500;
-    align-self: end;
-    width: 177px;
-    height: 52px;
     cursor: pointer;
-    letter-spacing: 2px;
-    transition: 0.3s;
+    transition: 0.15s;
 }
 
-.container .filtros .btn-filtrar:hover{
+.cabecalho .form-pesquisa button:hover {
     background-color: #33008F;
+    border-color: #33008F;
 }
 
-.container .cartas{
+.cabecalho .form-pesquisa button:active {
+    background-color: #9C6BEE;
+    border-color: #9C6BEE;
+}
+
+.cabecalho .menu-navegacao .link-carrinho {
     display: flex;
-    flex-wrap: wrap;
-    gap: 32px;
-    margin-top: 32px;
-}
+    align-items: center;
+    gap: 15px;
+    flex-shrink: 0;
 
-.container .cartas .carta{
-    max-width: 365px;
-    background-color: #EDEDED;
-    color: #0E0027;
-    border-radius: 20px;
-    box-shadow: 0 6px 12px rgb(0,0,0,0.2);
-}
-
-.container .carta img{
-    width: 100%;
-    padding: 20px;
-        cursor: pointer;
-    transition: transform 0.2s ease;
-}
-
-.container .carta img:hover {
-    transform: scale(1.03);
-}
-
-.container .carta .informacoes{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    background-color: #FFF;
-    padding: 20px;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-}
-
-.container .carta .informacoes .nome-personagem{
-    font-size: 24px;
-    font-weight: 700;
-    color: #111111;
-}
-
-.container .carta .informacoes .categoria{
-    color: #7E7E7E;
-    font-weight: 700;
-}
-
-.container .carta .informacoes .preco{
-    font-size: 24px;
-    letter-spacing: 2px;
-    font-weight: 700;
-    color: #4D8E5C;
-}
-
-.container .carta .informacoes .btn-comprar{
     color: #EDEDED;
-    background-color: #6528B3;
-    padding: 16px;
-    border-radius: 4px;
-    letter-spacing: 2px;
-    transition: 0.3s;
-    text-align: center;
     text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
 }
 
-.container .carta .informacoes .btn-comprar:hover{
-    background-color: #33008F;
+.cabecalho .menu-navegacao .icone-carrinho{
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.cabecalho .link-logo,
+.cabecalho .link-carrinho {
+    flex-shrink: 0;
 }
 
 .rodape{
@@ -163,12 +120,4 @@ body {
     color: #EDEDED;
     padding: 20px;
     margin-top: 60px;
-}
-
-.esconder{
-    display: none;
-}
-
-.mostrar{
-    display: block;
 }

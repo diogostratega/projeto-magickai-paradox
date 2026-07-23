@@ -1,0 +1,314 @@
+:root {
+    --altura-hero: 650px;
+}
+
+.hero {
+    position: relative;
+    overflow: hidden;
+
+    height: var(--altura-hero);
+
+    background-color: #0E0027;
+    color: #FFFFFF;
+}
+
+.carrossel {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    display: none;
+
+    position: relative;
+
+    width: 100%;
+    max-width: 1400px;
+    height: 100%;
+
+    margin: 0 auto;
+    padding: 70px 90px 125px;
+
+    align-items: center;
+    justify-content: space-between;
+    gap: 70px;
+}
+
+.slide.ativo {
+    display: flex;
+}
+
+.slide-centro {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 90px;
+}
+
+.slide-institucional {
+    align-items: center;
+
+    width: 100%;
+    max-width: none;
+    height: 100%;
+
+    margin: 0;
+    padding: 70px 0 125px;
+
+    background-image:
+        linear-gradient(90deg,
+            rgba(14, 0, 39, 1) 0%,
+            rgba(14, 0, 39, 0.70) 35%,
+            rgba(14, 0, 39, 0.2) 60%,
+            rgba(14, 0, 39, 0.55) 100%),
+        url("../img/monte-seu-deck.png");
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: calc(100% + 320px) center;
+}
+
+.slide-institucional .conteudo-slide {
+    max-width: 760px;
+}
+
+.slide-institucional .visual-slide {
+    display: none;
+}
+
+.slide-lancamento {
+    background:
+        radial-gradient(circle at 75% 45%,
+            #9235E8 0%,
+            #33008F 30%,
+            #0E0027 68%);
+}
+
+.slide-iniciante {
+    background:
+        radial-gradient(circle at 75% 45%,
+            #315F9D 0%,
+            #25105F 32%,
+            #0E0027 68%);
+}
+
+.slide-lancamento .conteudo-slide h2,
+.slide-iniciante .conteudo-slide h2 {
+    font-size: clamp(40px, 4vw, 60px);
+    line-height: 0.98;
+}
+
+.conteudo-slide {
+    position: relative;
+    z-index: 1;
+
+    flex: 1;
+    max-width: 760px;
+}
+
+.etiqueta-slide {
+    display: inline-block;
+
+    margin-bottom: 18px;
+    padding: 8px 14px;
+
+    border: 1px solid #9C6BEE;
+    border-radius: 30px;
+
+    background-color: rgb(101, 40, 211, 0.2);
+    color: #D8C5FA;
+
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.conteudo-slide h1,
+.conteudo-slide h2 {
+    margin-bottom: 24px;
+
+    color: #FFFFFF;
+
+    font-size: clamp(42px, 5vw, 72px);
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.conteudo-slide p {
+    max-width: 580px;
+    margin-bottom: 32px;
+
+    color: #D8D2E2;
+
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+
+.acoes-slide {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.botao-hero {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 52px;
+    padding: 14px 24px;
+
+    border: 2px solid #6528D3;
+    border-radius: 4px;
+
+    color: #FFFFFF;
+
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    transition:
+        background-color 0.2s,
+        border-color 0.2s,
+        transform 0.2s;
+}
+
+.botao-principal {
+    background-color: #6528D3;
+}
+
+.botao-principal:hover {
+    background-color: #33008F;
+    border-color: #9C6BEE;
+    transform: translateY(-2px);
+}
+
+.botao-secundario {
+    background-color: transparent;
+}
+
+.botao-secundario:hover {
+    background-color: rgb(101, 40, 211, 0.25);
+    border-color: #9C6BEE;
+    transform: translateY(-2px);
+}
+
+
+.visual-slide {
+    position: relative;
+    z-index: 1;
+
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 0;
+}
+
+.visual-slide img {
+    display: block;
+
+    width: 100%;
+    max-width: 560px;
+    max-height: 430px;
+
+    object-fit: contain;
+
+    filter: drop-shadow(0 25px 25px rgb(0, 0, 0, 0.45));
+}
+
+
+.seta-carrossel {
+    position: absolute;
+    z-index: 5;
+    top: 50%;
+
+    width: 48px;
+    height: 48px;
+
+    border: 1px solid rgb(255, 255, 255, 0.35);
+    border-radius: 50%;
+
+    background-color: rgb(14, 0, 39, 0.65);
+    color: #FFFFFF;
+
+    font-size: 24px;
+    cursor: pointer;
+
+    transform: translateY(-50%);
+    transition:
+        background-color 0.2s,
+        border-color 0.2s;
+}
+
+.seta-carrossel:hover {
+    border-color: #9C6BEE;
+    background-color: #6528D3;
+}
+
+.seta-anterior {
+    left: 24px;
+}
+
+.seta-proxima {
+    right: 24px;
+}
+
+
+.indicadores-carrossel {
+    position: absolute;
+    z-index: 5;
+    bottom: 24px;
+    left: 50%;
+
+    width: calc(100% - 48px);
+    max-width: 900px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+
+    transform: translateX(-50%);
+}
+
+.indicador-slide {
+    min-height: 58px;
+    padding: 10px 16px;
+
+    border: 1px solid rgb(255, 255, 255, 0.2);
+    border-radius: 4px;
+
+    background-color: rgb(14, 0, 39, 0.75);
+    color: #BEB5CC;
+
+    font-size: 14px;
+    font-weight: 500;
+    text-align: left;
+
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.indicador-slide span {
+    display: block;
+    margin-bottom: 4px;
+
+    color: #9C6BEE;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.indicador-slide:hover,
+.indicador-slide.ativo {
+    border-color: #9C6BEE;
+    background-color: #6528D3;
+    color: #FFFFFF;
+}

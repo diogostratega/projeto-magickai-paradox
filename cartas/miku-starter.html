@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
@@ -13,16 +13,49 @@
 
     <link rel="stylesheet" href="../src/css/reset.css">
     <link rel="stylesheet" href="../src/css/estilos.css">
-    <link rel="stylesheet" href="../src/css/responsivo.css">
     <link rel="stylesheet" href="../src/css/pagina-carta.css">
+    <link rel="stylesheet" href="../src/css/responsivo.css">
 </head>
 
 <body>
 
     <header class="cabecalho">
-        <a href="../index.html">
-            <img src="../src/img/logo-paradox.png" alt="Logo ParadoxTCG" class="logo">
-        </a>
+        <nav class="menu-navegacao" aria-label="Navegação principal">
+
+            <a href="../index.html" class="link-logo">
+                <img src="../src/img/logo-paradox.png" alt="Logo Paradox TCG" class="logo">
+            </a>
+
+            <ul class="menu">
+                <li>
+                    <a href="../produtos.html">Produtos</a>
+                </li>
+
+                <li>
+                    <a href="../index.html#lancamentos">Lançamentos</a>
+                </li>
+
+                <li>
+                    <a href="../index.html#categorias">Categorias</a>
+                </li>
+            </ul>
+
+            <form class="form-pesquisa" action="./produtos.html" method="get">
+                <input type="search" id="busca" name="busca" placeholder="Pesquisar produtos"
+                aria-label="Pesquisar produtos">
+
+                <button type="submit">
+                    Pesquisar
+                </button>
+            </form>
+
+            <a href="../carrinho-de-compras.html" class="link-carrinho" aria-label="Abrir carrinho de compras">
+                <img src="../src/img/carrinho.webp" alt="" class="icone-carrinho">
+
+                <span class="quantidade-carrinho">0</span>
+            </a>
+
+        </nav>
     </header>
 
     <main class="pagina-carta">
@@ -60,7 +93,7 @@
 
             <div class="botoes">
 
-                <a href="../index.html" class="btn-voltar">
+                <a href="../produtos.html" class="btn-voltar">
                     Voltar
                 </a>
 
@@ -74,7 +107,7 @@
         </div>
 
     </main>
-<footer class="rodape">@2026 - Todos os Direitos Reservados</footer>
+<footer class="rodape">&copy; 2026 - Todos os Direitos Reservados</footer>
 </body>
 
 </html>
