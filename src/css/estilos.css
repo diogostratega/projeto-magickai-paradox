@@ -1,11 +1,19 @@
 body {
-    font-family: "Roboto", sans-serif;
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #130234;
+    background: #faf9fc;
 }
 
 .cabecalho {
-    background-color: #0E0027;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
     min-height: 72px;
     padding: 10px 24px;
+
+    background-color: #0E0027;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
 }
 
 .cabecalho .menu-navegacao{
@@ -120,4 +128,31 @@ body {
     color: #EDEDED;
     padding: 20px;
     margin-top: 60px;
+}
+
+::-webkit-scrollbar {
+    width: 14px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0E0027;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(
+        180deg,
+        #8D5CFF,
+        #6528D3
+    );
+
+    border-radius: 999px;
+    border: 3px solid #0E0027;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(
+        180deg,
+        #A47CFF,
+        #7B41E8
+    );
 }

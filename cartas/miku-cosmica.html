@@ -1,47 +1,99 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ParadoxTCG - Miku Sinfonia Eterna</title>
-
-    <link rel="stylesheet" href="../src/css/reset.css">
-    <link rel="stylesheet" href="../src/css/estilos.css">
-    <link rel="stylesheet" href="../src/css/responsivo.css">
-    <link rel="stylesheet" href="../src/css/pagina-carta.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Miku Sinfonia Eterna | Paradox TCG</title>
+<meta name="description" content="Um microfone, uma cidade de luzes e uma plateia espalhada pelo espaço-tempo. A Miku Cósmica conduz a apresentação capaz de reunir todas as suas versões em uma única sinfonia.">
+<meta property="og:title" content="Miku Sinfonia Eterna | Paradox TCG">
+<meta property="og:description" content="Um microfone, uma cidade de luzes e uma plateia espalhada pelo espaço-tempo. A Miku Cósmica conduz a apresentação capaz de reunir todas as suas versões em uma única sinfonia.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:image" content="../src/img/otimizadas/monte-seu-deck.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../src/img/otimizadas/logo-paradox.webp" type="image/webp">
+<link rel="stylesheet" href="../src/css/reset.css">
+<link rel="stylesheet" href="../src/css/estilos.css">
+<link rel="stylesheet" href="../src/css/pagina-carta.css">
+<link rel="stylesheet" href="../src/css/melhorias.css">
+<link rel="stylesheet" href="../src/css/responsivo.css">
 </head>
 <body>
+<a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
 <header class="cabecalho">
-    <a href="../index.html">
-        <img src="../src/img/logo-paradox.png" alt="Logo ParadoxTCG" class="logo">
-    </a>
+<nav class="menu-navegacao" aria-label="Navegação principal">
+<a href="../index.html" class="link-logo">
+<img class="logo" src="../src/img/otimizadas/logo-paradox.webp" width="250" height="59" alt="Logo Paradox TCG" loading="eager" decoding="async">
+</a>
+<ul class="menu">
+<li>
+<a href="../produtos.html">Produtos</a>
+</li>
+<li>
+<a href="../index.html#lancamentos">Lançamentos</a>
+</li>
+<li>
+<a href="../index.html#categorias">Categorias</a>
+</li>
+</ul>
+<form class="form-pesquisa" action="../produtos.html" method="get">
+<input type="search" name="busca" placeholder="Pesquisar produtos" aria-label="Pesquisar produtos">
+<button type="submit">Pesquisar</button>
+</form>
+<a href="../carrinho-de-compras.html" class="link-carrinho" aria-label="Abrir carrinho de compras">
+<img class="icone-carrinho" src="../src/img/otimizadas/carrinho.webp" width="256" height="256" alt="" loading="eager" decoding="async">
+<span class="quantidade-carrinho">0</span>
+</a>
+</nav>
 </header>
-
-<main class="pagina-carta">
-    <div class="imagem-carta">
-        <img src="../src/img/miku-cosmica.png" alt="Miku Sinfonia Eterna">
-    </div>
-
-    <div class="detalhes-carta">
-        <h1>Miku Sinfonia Eterna</h1>
-        <h2>Raridade: Definir</h2>
-        <p><strong>Preço:</strong> Definir</p>
-
-        <p>
-            Descrição da carta.
-        </p>
-
-        <div class="efeito">
-            <h3>Efeito</h3>
-            <p>Adicionar efeito da carta.</p>
-        </div>
-
-        <div class="botoes">
-            <a href="../produtos.html" class="btn-voltar">Voltar</a>
-            <a href="#" class="btn-comprar">Comprar</a>
-        </div>
-    </div>
+<main id="conteudo" class="pagina-carta">
+<div class="imagem-carta">
+<img src="../src/img/otimizadas/miku-cosmica.webp" width="679" height="938" alt="Miku Sinfonia Eterna" loading="eager" decoding="async">
+</div>
+<div class="detalhes-carta">
+<a class="trilha" href="../produtos.html?categoria=cartas">Produtos / Cartas</a>
+<h1>Miku Sinfonia Eterna</h1>
+<h2>Raridade: Miku Paradoxo</h2>
+<p class="preco-detalhe">
+<strong>R$ 61,89</strong>
+</p>
+<p>Um microfone, uma cidade de luzes e uma plateia espalhada pelo espaço-tempo. A Miku Cósmica conduz a apresentação capaz de reunir todas as suas versões em uma única sinfonia.</p>
+<dl class="atributos">
+<div>
+<dt>Era</dt>
+<dd>Cósmica</dd>
+</div>
+<div>
+<dt>Força</dt>
+<dd>2500</dd>
+</div>
+<div>
+<dt>Defesa</dt>
+<dd>2500</dd>
+</div>
+</dl>
+<div class="efeito">
+<h3>Efeitos da carta</h3>
+<p>Combinação: Miku + Cósmico.</p>
+<p>No fim do turno, ative todos os efeitos Concerto em campo.</p>
+<p>Concerto: se existirem 6 Miku de eras diferentes em campo, você vence a partida.</p>
+</div>
+<div class="botoes">
+<a href="../produtos.html" class="btn-voltar">Voltar ao catálogo</a>
+<button type="button" class="btn-comprar" data-adicionar="miku-cosmica">Adicionar ao carrinho</button>
+</div>
+<p class="nota-compra">Reúna seus produtos no carrinho e prepare o pedido pelo WhatsApp.</p>
+</div>
 </main>
-<footer class="rodape">&copy; 2026 - Todos os Direitos Reservados</footer>
+<footer class="rodape">
+<p>&copy; 2026 Paradox TCG · Universo fictício para colecionadores.</p>
+<a href="../produtos.html">Explorar produtos</a>
+</footer>
+<p id="aviso-global" class="aviso-global" role="status" aria-live="polite">
+</p>
+<script src="../src/js/catalogo.js" defer>
+</script>
+<script src="../src/js/index.js" defer>
+</script>
 </body>
 </html>

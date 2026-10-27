@@ -1,41 +1,64 @@
-@media(max-width: 1024px) {
-    .container {
-        padding: 20px;
-    }
-
-    .container h1 {
-        text-align: center;
-    }
-
-    .container .filtros {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 16px;
-    }
-
-    .container .filtros .categorias-cartas,
-    .container .filtros .preco-cartas,
-    .container .filtros .btn-filtrar {
-        width: 65%;
-    }
-
-    .container .filtros .btn-filtrar {
-        align-self: center;
-    }
-
-    .container .cartas {
-        justify-content: center;
-    }
-
-    .container .cartas li {
-        width: 45%;
-        margin: 10px;
-    }
+@media (max-width: 1100px) {
+    .cabecalho .menu-navegacao { flex-wrap: wrap; gap: 16px 24px; }
+    .cabecalho .menu-navegacao .form-pesquisa { order: 4; flex: 1 1 100%; max-width: none; }
+    .cabecalho .menu-navegacao .menu { margin-left: auto; }
+    .slide { gap: 32px; padding-inline: 70px; }
+    .slide-centro, .conteudo-home { padding-inline: 40px; }
+    .slide-institucional { padding-inline: 0; background-position: center; }
+    .conteudo-slide h1 { font-size: 54px; }
+    .slide-lancamento .conteudo-slide h2, .slide-iniciante .conteudo-slide h2 { font-size: 42px; }
+    .acoes-slide { flex-wrap: wrap; }
+    .lista-lancamentos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .card-lancamento-destaque { grid-column: 1 / -1; }
 }
-
-@media(max-width: 480px) {
-    .container .cartas li {
-        width: 100%;
-    }
+@media (max-width: 768px) {
+    .cabecalho { position: relative; padding: 12px 20px; }
+    .cabecalho .menu-navegacao .logo { height: 44px; }
+    .cabecalho .menu-navegacao { gap: 14px; }
+    .cabecalho .menu-navegacao .menu { order: 3; width: 100%; justify-content: center; gap: 20px; font-size: 13px; }
+    .cabecalho .menu-navegacao .link-carrinho { margin-left: auto; }
+    .hero { height: auto; min-height: 650px; }
+    .carrossel { height: auto; }
+    .slide { min-height: 650px; height: auto; padding: 48px 24px 150px; flex-direction: column; gap: 28px; }
+    .slide-institucional { padding-inline: 0; background-position: 65% center; }
+    .slide-centro, .conteudo-home { padding-inline: 24px; }
+    .slide-institucional { background-image: linear-gradient(90deg,#0e0027ed,#0e002799),url('../img/otimizadas/monte-seu-deck.webp'); }
+    .conteudo-slide { flex: auto; width: 100%; }
+    .conteudo-slide h1 { font-size: clamp(30px, 6.5vw, 48px); line-height: 1.1; }
+    .slide-lancamento .conteudo-slide h2, .slide-iniciante .conteudo-slide h2 { font-size: clamp(30px, 6.5vw, 44px); line-height: 1.1; }
+    .conteudo-slide p { font-size: 16px; line-height: 1.6; }
+    .etiqueta-slide { font-size: 11px; letter-spacing: 1px; }
+    .acoes-slide { gap: 12px; }
+    .botao-hero { font-size: 13px; padding: 12px 16px; }
+    .visual-slide { flex: auto; width: 100%; }
+    .visual-slide img { max-height: 210px; width: auto; max-width: 100%; }
+    .seta-carrossel { top: auto; bottom: 92px; width: 36px; height: 36px; font-size: 18px; transform: none; }
+    .seta-anterior { left: 24px; } .seta-proxima { right: 24px; }
+    .indicadores-carrossel { bottom: 20px; gap: 6px; }
+    .indicador-slide { font-size: 11px; padding: 8px; }
+    .indicador-slide span { color: #e2ceff; }
+    .secao-lancamentos, .secao-categorias { padding: 64px 0; }
+    .cabecalho-secao { flex-direction: column; align-items: flex-start; gap: 20px; }
+    .cabecalho-secao h2 { font-size: 32px; }
+    .lista-lancamentos { grid-template-columns: 1fr; }
+    .grade-categorias { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-rows: 200px; gap: 12px; }
+    .categoria-home { grid-column: span 1; grid-row: span 1; }
+    .categoria-cartas { grid-column: 1 / -1; }
+    .conteudo-categoria { inset: auto 16px 20px; }
+    .conteudo-categoria h3 { font-size: 23px; }
+    .conteudo-categoria span { font-size: 10px; }
+    .rodape { font-size: 13px; }
+    .pagina-carta { margin: 20px auto; gap: 28px; }
+    .imagem-carta { max-width: 360px; }
+    .item-carrinho { grid-template-columns: 64px 1fr; gap: 16px; }
+    .item-carrinho img { width: 64px; height: 90px; }
+    .item-carrinho a { font-size: 17px; }
+    .item-carrinho label { grid-column: 2; }
+    .item-carrinho button { grid-column: 2; justify-self: start; }
+}
+@media (max-width: 420px) {
+    .acoes-slide { align-items: stretch; flex-direction: column; }
+    .grade-categorias { grid-template-columns: 1fr; }
+    .categoria-home { grid-column: 1; }
+    .botoes > * { width: 100%; }
 }

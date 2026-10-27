@@ -1,255 +1,332 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ParadoxTCG</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-
-    <link rel="stylesheet" href="./src/css/reset.css">
-    <link rel="stylesheet" href="./src/css/estilos.css">
-    <link rel="stylesheet" href="./src/css/produtos.css">
-    <link rel="stylesheet" href="./src/css/responsivo.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Produtos e cartas | Paradox TCG</title>
+<meta name="description" content="Explore cartas, boosters, decks e acessórios. Filtre por categoria, raridade e preço.">
+<meta property="og:title" content="Produtos e cartas | Paradox TCG">
+<meta property="og:description" content="Explore cartas, boosters, decks e acessórios. Filtre por categoria, raridade e preço.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:image" content="src/img/otimizadas/monte-seu-deck.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="src/img/otimizadas/logo-paradox.webp" type="image/webp">
+<link rel="stylesheet" href="src/css/reset.css">
+<link rel="stylesheet" href="src/css/estilos.css">
+<link rel="stylesheet" href="src/css/produtos.css">
+<link rel="stylesheet" href="src/css/melhorias.css">
+<link rel="stylesheet" href="src/css/responsivo.css">
 </head>
-
 <body>
-    <header class="cabecalho">
-        <nav class="menu-navegacao" aria-label="Navegação principal">
-
-            <a href="./index.html" class="link-logo">
-                <img src="./src/img/logo-paradox.png" alt="Logo Paradox TCG" class="logo">
-            </a>
-
-            <ul class="menu">
-                <li>
-                    <a href="./produtos.html">Produtos</a>
-                </li>
-
-                <li>
-                    <a href="./index.html#lancamentos">Lançamentos</a>
-                </li>
-
-                <li>
-                    <a href="./index.html#categorias">Categorias</a>
-                </li>
-            </ul>
-
-            <form class="form-pesquisa" action="./produtos.html" method="get">
-                <input type="search" id="busca" name="busca" placeholder="Pesquisar produtos"
-                aria-label="Pesquisar produtos">
-
-                <button type="submit">
-                    Pesquisar
-                </button>
-            </form>
-
-            <a href="./carrinho-de-compras.html" class="link-carrinho" aria-label="Abrir carrinho de compras">
-                <img src="./src/img/carrinho.webp" alt="" class="icone-carrinho">
-
-                <span class="quantidade-carrinho">0</span>
-            </a>
-
-        </nav>
-    </header>
-
-    <main class="container">
-        <h1 class="produtos">PRODUTOS</h1>
-        <div class="filtros">
-            <div class="categorias-cartas">
-                <label for="categoria">Raridade</label>
-                <select id="categoria" class="categoria">
-                    <option value="">Mostrar Todos</option>
-                    <option value="bronze">Bronze</option>
-                    <option value="prata">Prata</option>
-                    <option value="ouro">Ouro</option>
-                    <option value="paradoxo">Paradox</option>
-                    <option value="miku">Miku</option>
-                </select>
-            </div>
-            <div class="preco-cartas">
-                <label for="preco">Preço Máximo (R$)</label>
-                <input type="text" id="preco" class="preco" placeholder="EX.: 300">
-            </div>
-            <button class="btn-filtrar">Aplicar Filtro</button>
-        </div>
-        <ul class="cartas">
-            <li class="carta" data-categoria="ouro" data-preco="110">
-                <a href="cartas/juiz-solar.html">
-                    <img src="src/img/carta-juiz.png" alt="Juiz Solar Celestial">
-                </a>
-
-                <div class="informacoes">
-                    <h2 class="nome-personagem">Juiz Solar Celestial</h2>
-                    <span class="categoria">Raridade: Ouro</span>
-                    <span class="preco">R$ 110,00</span>
-                    <a href="http://wa.me/5581988865200?text=Ei boy, o Juiz brabo esta disponível?" class="btn-comprar"
-                        target="_blank">Comprar</a>
-                </div>
-            </li>
-
-            <li class="carta" data-categoria="paradoxo" data-preco="333.9">
-                <a href="cartas/juiz-negro.html">
-                    <img src="src/img/carta-juiz-negativo.png" alt="Juiz Negro Universal">
-                </a>
-
-                <div class="informacoes">
-                    <h2 class="nome-personagem">Juiz Negro Universal</h2>
-                    <span class="categoria">Raridade: Paradox</span>
-                    <span class="preco">R$ 333,90</span>
-                    <a href="http://wa.me/5581988865200?text=Ei boy, o Juiz brabo espectrado esta disponível?"
-                        class="btn-comprar" target="_blank">Comprar</a>
-                </div>
-            </li>
-
-            <li class="carta" data-categoria="prata" data-preco="11.06">
-                <a href="cartas/general-valente.html">
-                    <img src="src/img/carta-general.png" alt="General Valente">
-                </a>
-
-                <div class="informacoes">
-                    <h2 class="nome-personagem">General Valente</h2>
-                    <span class="categoria">Raridade: Prata</span>
-                    <span class="preco">R$ 11,06</span>
-                    <a href="http://wa.me/5581988865200?text=Oi, a carta General esta disponível?" class="btn-comprar"
-                        target="_blank">Comprar</a>
-                </div>
-            </li>
-
-            <li class="carta" data-categoria="bronze" data-preco="1.6">
-                <a href="cartas/arqueiro-agil.html">
-                    <img src="src/img/carta-arqueiro.png" alt="Arqueiro Ágil">
-                </a>
-
-                <div class="informacoes">
-                    <h2 class="nome-personagem">Arqueiro Ágil</h2>
-                    <span class="categoria">Raridade: Bronze</span>
-                    <span class="preco">R$ 1,60</span>
-                    <a href="http://wa.me/5581988865200?text=Oi, aquele arqueiro genérico esta disponível?"
-                        class="btn-comprar" target="_blank">Comprar</a>
-                </div>
-            </li>
-
-            <li class="carta" data-categoria="bronze" data-preco="6.98">
-                <a href="cartas/cavaleiro-medroso.html">
-                    <img src="src/img/carta-cavaleiro.png" alt="Cavaleiro Medroso">
-                </a>
-
-                <div class="informacoes">
-                    <h2 class="nome-personagem">Cavaleiro Medroso</h2>
-                    <span class="categoria">Raridade: Bronze</span>
-                    <span class="preco">R$ 6,98</span>
-                    <a href="http://wa.me/5581988865200?text=Oi, o cavaleiro genérico esta disponível?"
-                        class="btn-comprar" target="_blank">Comprar</a>
-                </div>
-            </li>
-
-            <li class="carta" data-categoria="bronze" data-preco="9.99">
-                <a href="cartas/sacerdotisa-curandeira.html">
-                    <img src="src/img/carta-curandeira.png" alt="Sacerdotisa Curandeira">
-                </a>
-
-                <div class="informacoes">
-                    <h2 class="nome-personagem">Sacerdotisa Curandeira</h2>
-                    <span class="categoria">Raridade: Bronze</span>
-                    <span class="preco">R$ 9,99</span>
-                    <a href="http://wa.me/5581988865200?text=Oi, a carta da waifu que vai virar a Miku esta disponível?"
-                        class="btn-comprar" target="_blank">Comprar</a>
-                </div>
-            </li>
-
-            <li class="carta" data-categoria="miku bronze" data-preco="74.50">
-                <a href="cartas/miku-starter.html">
-                    <img src="src/img/miku-starter.png" alt="Miku Quer Sair de Casa">
-                </a>
-
-                <div class="informacoes">
-                    <h2 class="nome-personagem">Miku Quer Sair de Casa</h2>
-                    <span class="categoria">Raridade: Miku</span>
-                    <span class="preco">R$ 74,50</span>
-                    <a href="http://wa.me/5581988865200?text=Oi, a carta Miku Quer Sair de Casa está disponível?"
-                        class="btn-comprar" target="_blank">Comprar</a>
-                </div>
-            </li>
-
-            <li class="carta" data-categoria="miku paradoxo" data-preco="61.89">
-                <a href="cartas/miku-cosmica.html">
-                    <img src="src/img/miku-cosmica.png" alt="Miku Sinfonia Eterna">
-                </a>
-
-                <div class="informacoes">
-                    <h2 class="nome-personagem">Miku Sinfonia Eterna</h2>
-                    <span class="categoria">Raridade: Miku</span>
-                    <span class="preco">R$ 61,89</span>
-                    <a href="http://wa.me/5581988865200?text=Oi, a carta Miku Sinfonia Eterna está disponível?"
-                        class="btn-comprar" target="_blank">Comprar</a>
-                </div>
-            </li>
-
-            <li class="carta" data-categoria="miku paradoxo" data-preco="82.37">
-                <a href="cartas/miku-pirata.html">
-                    <img src="src/img/miku-pirata.png" alt="Miku Cantigas de Pirata">
-                </a>
-
-                <div class="informacoes">
-                    <h2 class="nome-personagem">Miku Cantigas de Pirata</h2>
-                    <span class="categoria">Raridade: Miku</span>
-                    <span class="preco">R$ 82,37</span>
-                    <a href="http://wa.me/5581988865200?text=Oi, a carta Miku Cantigas de Pirata está disponível?"
-                        class="btn-comprar" target="_blank">Comprar</a>
-                </div>
-            </li>
-
-            <li class="carta" data-categoria="miku paradoxo" data-preco="42.14">
-                <a href="cartas/miku-medieval.html">
-                    <img src="src/img/miku-medieval.png" alt="Miku Serenata Élfica">
-                </a>
-
-                <div class="informacoes">
-                    <h2 class="nome-personagem">Miku Serenata Élfica</h2>
-                    <span class="categoria">Raridade: Miku</span>
-                    <span class="preco">R$ 42,14</span>
-                    <a href="http://wa.me/5581988865200?text=Oi, a carta Miku Serenata Élfica está disponível?"
-                        class="btn-comprar" target="_blank">Comprar</a>
-                </div>
-            </li>
-
-            <li class="carta" data-categoria="miku paradoxo" data-preco="34.53">
-                <a href="cartas/miku-br.html">
-                    <img src="src/img/miku-br.png" alt="Miku Pisadinha Sambática">
-                </a>
-
-                <div class="informacoes">
-                    <h2 class="nome-personagem">Miku Pisadinha Sambática</h2>
-                    <span class="categoria">Raridade: Miku</span>
-                    <span class="preco">R$ 34,53</span>
-                    <a href="http://wa.me/5581988865200?text=Oi, a carta Miku Pisadinha Sambática está disponível?"
-                        class="btn-comprar" target="_blank">Comprar</a>
-                </div>
-            </li>
-
-            <li class="carta" data-categoria="miku paradoxo" data-preco="29.31">
-                <a href="cartas/miku-jurassica.html">
-                    <img src="src/img/miku-jurassica.png" alt="Miku Melodia Jurássica">
-                </a>
-
-                <div class="informacoes">
-                    <h2 class="nome-personagem">Miku Melodia Jurássica</h2>
-                    <span class="categoria">Raridade: Miku</span>
-                    <span class="preco">R$ 29,31</span>
-                    <a href="http://wa.me/5581988865200?text=Oi, a carta Miku Melodia Jurássica está disponível?"
-                        class="btn-comprar" target="_blank">Comprar</a>
-                </div>
-            </li>
-        </ul>
-    </main>
-
-    <footer class="rodape">&copy; 2026 - Todos os Direitos Reservados</footer>
-    <script src="./src/js/index.js"></script>
+<a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+<header class="cabecalho">
+<nav class="menu-navegacao" aria-label="Navegação principal">
+<a href="index.html" class="link-logo">
+<img class="logo" src="src/img/otimizadas/logo-paradox.webp" width="250" height="59" alt="Logo Paradox TCG" loading="eager" decoding="async">
+</a>
+<ul class="menu">
+<li>
+<a href="produtos.html">Produtos</a>
+</li>
+<li>
+<a href="index.html#lancamentos">Lançamentos</a>
+</li>
+<li>
+<a href="index.html#categorias">Categorias</a>
+</li>
+</ul>
+<form class="form-pesquisa" action="produtos.html" method="get">
+<input type="search" name="busca" placeholder="Pesquisar produtos" aria-label="Pesquisar produtos">
+<button type="submit">Pesquisar</button>
+</form>
+<a href="carrinho-de-compras.html" class="link-carrinho" aria-label="Abrir carrinho de compras">
+<img class="icone-carrinho" src="src/img/otimizadas/carrinho.webp" width="256" height="256" alt="" loading="eager" decoding="async">
+<span class="quantidade-carrinho">0</span>
+</a>
+</nav>
+</header>
+<main id="conteudo" class="container">
+<h1 class="produtos">Produtos</h1>
+<form id="filtros" class="filtros">
+<div>
+<label for="tipo-produto">Categoria</label>
+<select id="tipo-produto" name="categoria">
+<option value="">Todas</option>
+<option value="cartas">Cartas avulsas</option>
+<option value="boosters">Boosters</option>
+<option value="decks">Decks iniciais</option>
+<option value="deckboxes">Deckboxes</option>
+<option value="sleeves">Sleeves</option>
+<option value="acessorios">Acessórios</option>
+</select>
+</div>
+<div>
+<label for="categoria">Raridade</label>
+<select id="categoria" name="raridade">
+<option value="">Todas</option>
+<option value="bronze">Bronze</option>
+<option value="prata">Prata</option>
+<option value="ouro">Ouro</option>
+<option value="paradoxo">Paradoxo</option>
+<option value="miku">Miku</option>
+</select>
+</div>
+<div>
+<label for="preco">Preço máximo (R$)</label>
+<input type="text" inputmode="decimal" id="preco" name="preco" placeholder="Ex.: 11,50" aria-describedby="erro-preco">
+</div>
+<div>
+<label for="ordem">Ordenar por</label>
+<select id="ordem" name="ordem">
+<option value="">Destaques</option>
+<option value="lancamentos">Lançamentos</option>
+<option value="menor-preco">Menor preço</option>
+<option value="maior-preco">Maior preço</option>
+<option value="nome">Nome</option>
+</select>
+</div>
+<button type="submit" class="btn-filtrar">Aplicar filtros</button>
+<button type="button" id="limpar-filtros" class="btn-voltar">Limpar filtros</button>
+</form>
+<p id="erro-preco" class="erro" role="alert">
+</p>
+<p id="resultados" role="status" aria-live="polite">
+</p>
+<p id="sem-resultados" hidden>Nenhum produto encontrado. Tente outra busca ou limpe os filtros.</p>
+<ul class="cartas">
+<li class="carta" data-id="juiz-solar">
+<a href="cartas/juiz-solar.html">
+<img src="src/img/otimizadas/carta-juiz.webp" width="679" height="938" alt="Juiz Solar Celestial" loading="lazy" decoding="async">
+</a>
+<div class="informacoes">
+<h2 class="nome-personagem">
+<a href="cartas/juiz-solar.html">Juiz Solar Celestial</a>
+</h2>
+<span class="categoria">Ouro</span>
+<span class="preco">R$ 110,00</span>
+<button class="btn-comprar" type="button" data-adicionar="juiz-solar">Adicionar ao carrinho</button>
+</div>
+</li>
+<li class="carta" data-id="juiz-negro">
+<a href="cartas/juiz-negro.html">
+<img src="src/img/otimizadas/carta-juiz-negativo.webp" width="679" height="938" alt="Juiz Negro Universal" loading="lazy" decoding="async">
+</a>
+<div class="informacoes">
+<h2 class="nome-personagem">
+<a href="cartas/juiz-negro.html">Juiz Negro Universal</a>
+</h2>
+<span class="categoria">Paradoxo</span>
+<span class="preco">R$ 333,90</span>
+<button class="btn-comprar" type="button" data-adicionar="juiz-negro">Adicionar ao carrinho</button>
+</div>
+</li>
+<li class="carta" data-id="general-valente">
+<a href="cartas/general-valente.html">
+<img src="src/img/otimizadas/carta-general.webp" width="679" height="938" alt="General Valente" loading="lazy" decoding="async">
+</a>
+<div class="informacoes">
+<h2 class="nome-personagem">
+<a href="cartas/general-valente.html">General Valente</a>
+</h2>
+<span class="categoria">Prata</span>
+<span class="preco">R$ 11,06</span>
+<button class="btn-comprar" type="button" data-adicionar="general-valente">Adicionar ao carrinho</button>
+</div>
+</li>
+<li class="carta" data-id="arqueiro-agil">
+<a href="cartas/arqueiro-agil.html">
+<img src="src/img/otimizadas/carta-arqueiro.webp" width="679" height="938" alt="Arqueiro Ágil" loading="lazy" decoding="async">
+</a>
+<div class="informacoes">
+<h2 class="nome-personagem">
+<a href="cartas/arqueiro-agil.html">Arqueiro Ágil</a>
+</h2>
+<span class="categoria">Bronze</span>
+<span class="preco">R$ 1,60</span>
+<button class="btn-comprar" type="button" data-adicionar="arqueiro-agil">Adicionar ao carrinho</button>
+</div>
+</li>
+<li class="carta" data-id="cavaleiro-medroso">
+<a href="cartas/cavaleiro-medroso.html">
+<img src="src/img/otimizadas/carta-cavaleiro.webp" width="679" height="938" alt="Cavaleiro Medroso" loading="lazy" decoding="async">
+</a>
+<div class="informacoes">
+<h2 class="nome-personagem">
+<a href="cartas/cavaleiro-medroso.html">Cavaleiro Medroso</a>
+</h2>
+<span class="categoria">Bronze</span>
+<span class="preco">R$ 6,98</span>
+<button class="btn-comprar" type="button" data-adicionar="cavaleiro-medroso">Adicionar ao carrinho</button>
+</div>
+</li>
+<li class="carta" data-id="sacerdotisa-curandeira">
+<a href="cartas/sacerdotisa-curandeira.html">
+<img src="src/img/otimizadas/carta-curandeira.webp" width="679" height="938" alt="Sacerdotisa Curandeira" loading="lazy" decoding="async">
+</a>
+<div class="informacoes">
+<h2 class="nome-personagem">
+<a href="cartas/sacerdotisa-curandeira.html">Sacerdotisa Curandeira</a>
+</h2>
+<span class="categoria">Bronze</span>
+<span class="preco">R$ 9,99</span>
+<button class="btn-comprar" type="button" data-adicionar="sacerdotisa-curandeira">Adicionar ao carrinho</button>
+</div>
+</li>
+<li class="carta" data-id="miku-starter">
+<a href="cartas/miku-starter.html">
+<img src="src/img/otimizadas/miku-starter.webp" width="679" height="938" alt="Miku Quer Sair de Casa" loading="lazy" decoding="async">
+</a>
+<div class="informacoes">
+<h2 class="nome-personagem">
+<a href="cartas/miku-starter.html">Miku Quer Sair de Casa</a>
+</h2>
+<span class="categoria">Miku Bronze</span>
+<span class="preco">R$ 74,50</span>
+<button class="btn-comprar" type="button" data-adicionar="miku-starter">Adicionar ao carrinho</button>
+</div>
+</li>
+<li class="carta" data-id="miku-cosmica">
+<a href="cartas/miku-cosmica.html">
+<img src="src/img/otimizadas/miku-cosmica.webp" width="679" height="938" alt="Miku Sinfonia Eterna" loading="lazy" decoding="async">
+</a>
+<div class="informacoes">
+<h2 class="nome-personagem">
+<a href="cartas/miku-cosmica.html">Miku Sinfonia Eterna</a>
+</h2>
+<span class="categoria">Miku Paradoxo</span>
+<span class="preco">R$ 61,89</span>
+<button class="btn-comprar" type="button" data-adicionar="miku-cosmica">Adicionar ao carrinho</button>
+</div>
+</li>
+<li class="carta" data-id="miku-pirata">
+<a href="cartas/miku-pirata.html">
+<img src="src/img/otimizadas/miku-pirata.webp" width="679" height="938" alt="Miku Cantigas de Pirata" loading="lazy" decoding="async">
+</a>
+<div class="informacoes">
+<h2 class="nome-personagem">
+<a href="cartas/miku-pirata.html">Miku Cantigas de Pirata</a>
+</h2>
+<span class="categoria">Miku Paradoxo</span>
+<span class="preco">R$ 82,37</span>
+<button class="btn-comprar" type="button" data-adicionar="miku-pirata">Adicionar ao carrinho</button>
+</div>
+</li>
+<li class="carta" data-id="miku-medieval">
+<a href="cartas/miku-medieval.html">
+<img src="src/img/otimizadas/miku-medieval.webp" width="679" height="938" alt="Miku Serenata Élfica" loading="lazy" decoding="async">
+</a>
+<div class="informacoes">
+<h2 class="nome-personagem">
+<a href="cartas/miku-medieval.html">Miku Serenata Élfica</a>
+</h2>
+<span class="categoria">Miku Paradoxo</span>
+<span class="preco">R$ 42,14</span>
+<button class="btn-comprar" type="button" data-adicionar="miku-medieval">Adicionar ao carrinho</button>
+</div>
+</li>
+<li class="carta" data-id="miku-br">
+<a href="cartas/miku-br.html">
+<img src="src/img/otimizadas/miku-br.webp" width="679" height="938" alt="Miku Pisadinha Sambática" loading="lazy" decoding="async">
+</a>
+<div class="informacoes">
+<h2 class="nome-personagem">
+<a href="cartas/miku-br.html">Miku Pisadinha Sambática</a>
+</h2>
+<span class="categoria">Miku Paradoxo</span>
+<span class="preco">R$ 34,53</span>
+<button class="btn-comprar" type="button" data-adicionar="miku-br">Adicionar ao carrinho</button>
+</div>
+</li>
+<li class="carta" data-id="miku-jurassica">
+<a href="cartas/miku-jurassica.html">
+<img src="src/img/otimizadas/miku-jurassica.webp" width="679" height="938" alt="Miku Melodia Jurássica" loading="lazy" decoding="async">
+</a>
+<div class="informacoes">
+<h2 class="nome-personagem">
+<a href="cartas/miku-jurassica.html">Miku Melodia Jurássica</a>
+</h2>
+<span class="categoria">Miku Paradoxo</span>
+<span class="preco">R$ 29,31</span>
+<button class="btn-comprar" type="button" data-adicionar="miku-jurassica">Adicionar ao carrinho</button>
+</div>
+</li>
+<li class="carta" data-id="booster-paradoxo">
+<a href="produtos/booster-paradoxo.html">
+<img src="src/img/otimizadas/boosterbox.webp" width="800" height="880" alt="Coleção Ruptura do Paradoxo" loading="lazy" decoding="async">
+</a>
+<div class="informacoes">
+<h2 class="nome-personagem">
+<a href="produtos/booster-paradoxo.html">Coleção Ruptura do Paradoxo</a>
+</h2>
+<span class="categoria">Boosters</span>
+<span class="preco">R$ 289,90</span>
+<button class="btn-comprar" type="button" data-adicionar="booster-paradoxo">Adicionar ao carrinho</button>
+</div>
+</li>
+<li class="carta" data-id="decks-das-eras">
+<a href="produtos/decks-das-eras.html">
+<img src="src/img/otimizadas/starter-deck.webp" width="800" height="600" alt="Decks das Eras" loading="lazy" decoding="async">
+</a>
+<div class="informacoes">
+<h2 class="nome-personagem">
+<a href="produtos/decks-das-eras.html">Decks das Eras</a>
+</h2>
+<span class="categoria">Decks</span>
+<span class="preco">R$ 89,90</span>
+<button class="btn-comprar" type="button" data-adicionar="decks-das-eras">Adicionar ao carrinho</button>
+</div>
+</li>
+<li class="carta" data-id="deckbox-paradoxo">
+<a href="produtos/deckbox-paradoxo.html">
+<img src="src/img/otimizadas/categorias/deckboxes.webp" width="800" height="800" alt="Deckbox Portal Violeta" loading="lazy" decoding="async">
+</a>
+<div class="informacoes">
+<h2 class="nome-personagem">
+<a href="produtos/deckbox-paradoxo.html">Deckbox Portal Violeta</a>
+</h2>
+<span class="categoria">Deckboxes</span>
+<span class="preco">R$ 39,90</span>
+<button class="btn-comprar" type="button" data-adicionar="deckbox-paradoxo">Adicionar ao carrinho</button>
+</div>
+</li>
+<li class="carta" data-id="sleeves-paradoxo">
+<a href="produtos/sleeves-paradoxo.html">
+<img src="src/img/otimizadas/categorias/sleeves.webp" width="800" height="800" alt="Sleeves Ecos do Paradoxo" loading="lazy" decoding="async">
+</a>
+<div class="informacoes">
+<h2 class="nome-personagem">
+<a href="produtos/sleeves-paradoxo.html">Sleeves Ecos do Paradoxo</a>
+</h2>
+<span class="categoria">Sleeves</span>
+<span class="preco">R$ 24,90</span>
+<button class="btn-comprar" type="button" data-adicionar="sleeves-paradoxo">Adicionar ao carrinho</button>
+</div>
+</li>
+<li class="carta" data-id="kit-marcadores">
+<a href="produtos/kit-marcadores.html">
+<img src="src/img/otimizadas/categorias/acessorios.webp" width="800" height="800" alt="Kit de Marcadores das Eras" loading="lazy" decoding="async">
+</a>
+<div class="informacoes">
+<h2 class="nome-personagem">
+<a href="produtos/kit-marcadores.html">Kit de Marcadores das Eras</a>
+</h2>
+<span class="categoria">Acessorios</span>
+<span class="preco">R$ 19,90</span>
+<button class="btn-comprar" type="button" data-adicionar="kit-marcadores">Adicionar ao carrinho</button>
+</div>
+</li>
+</ul>
+</main>
+<footer class="rodape">
+<p>&copy; 2026 Paradox TCG · Universo fictício para colecionadores.</p>
+<a href="produtos.html">Explorar produtos</a>
+</footer>
+<p id="aviso-global" class="aviso-global" role="status" aria-live="polite">
+</p>
+<script src="src/js/catalogo.js" defer>
+</script>
+<script src="src/js/index.js" defer>
+</script>
 </body>
-
 </html>

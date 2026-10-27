@@ -1,47 +1,98 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ParadoxTCG - General Valente</title>
-
-    <link rel="stylesheet" href="../src/css/reset.css">
-    <link rel="stylesheet" href="../src/css/estilos.css">
-    <link rel="stylesheet" href="../src/css/responsivo.css">
-    <link rel="stylesheet" href="../src/css/pagina-carta.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>General Valente | Paradox TCG</title>
+<meta name="description" content="Conhecido nos campos de batalha como General Medieval, ergue a espada sob uma chuva de flechas. Seu estandarte vermelho reúne os guerreiros que ainda resistem ao Paradoxo.">
+<meta property="og:title" content="General Valente | Paradox TCG">
+<meta property="og:description" content="Conhecido nos campos de batalha como General Medieval, ergue a espada sob uma chuva de flechas. Seu estandarte vermelho reúne os guerreiros que ainda resistem ao Paradoxo.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:image" content="../src/img/otimizadas/monte-seu-deck.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../src/img/otimizadas/logo-paradox.webp" type="image/webp">
+<link rel="stylesheet" href="../src/css/reset.css">
+<link rel="stylesheet" href="../src/css/estilos.css">
+<link rel="stylesheet" href="../src/css/pagina-carta.css">
+<link rel="stylesheet" href="../src/css/melhorias.css">
+<link rel="stylesheet" href="../src/css/responsivo.css">
 </head>
 <body>
+<a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
 <header class="cabecalho">
-    <a href="../index.html">
-        <img src="../src/img/logo-paradox.png" alt="Logo ParadoxTCG" class="logo">
-    </a>
+<nav class="menu-navegacao" aria-label="Navegação principal">
+<a href="../index.html" class="link-logo">
+<img class="logo" src="../src/img/otimizadas/logo-paradox.webp" width="250" height="59" alt="Logo Paradox TCG" loading="eager" decoding="async">
+</a>
+<ul class="menu">
+<li>
+<a href="../produtos.html">Produtos</a>
+</li>
+<li>
+<a href="../index.html#lancamentos">Lançamentos</a>
+</li>
+<li>
+<a href="../index.html#categorias">Categorias</a>
+</li>
+</ul>
+<form class="form-pesquisa" action="../produtos.html" method="get">
+<input type="search" name="busca" placeholder="Pesquisar produtos" aria-label="Pesquisar produtos">
+<button type="submit">Pesquisar</button>
+</form>
+<a href="../carrinho-de-compras.html" class="link-carrinho" aria-label="Abrir carrinho de compras">
+<img class="icone-carrinho" src="../src/img/otimizadas/carrinho.webp" width="256" height="256" alt="" loading="eager" decoding="async">
+<span class="quantidade-carrinho">0</span>
+</a>
+</nav>
 </header>
-
-<main class="pagina-carta">
-    <div class="imagem-carta">
-        <img src="../src/img/carta-general.png" alt="General Valente">
-    </div>
-
-    <div class="detalhes-carta">
-        <h1>General Valente</h1>
-        <h2>Raridade: Definir</h2>
-        <p><strong>Preço:</strong> Definir</p>
-
-        <p>
-            Descrição da carta.
-        </p>
-
-        <div class="efeito">
-            <h3>Efeito</h3>
-            <p>Adicionar efeito da carta.</p>
-        </div>
-
-        <div class="botoes">
-            <a href="../produtos.html" class="btn-voltar">Voltar</a>
-            <a href="#" class="btn-comprar">Comprar</a>
-        </div>
-    </div>
+<main id="conteudo" class="pagina-carta">
+<div class="imagem-carta">
+<img src="../src/img/otimizadas/carta-general.webp" width="679" height="938" alt="General Valente" loading="eager" decoding="async">
+</div>
+<div class="detalhes-carta">
+<a class="trilha" href="../produtos.html?categoria=cartas">Produtos / Cartas</a>
+<h1>General Valente</h1>
+<h2>Raridade: Prata</h2>
+<p class="preco-detalhe">
+<strong>R$ 11,06</strong>
+</p>
+<p>Conhecido nos campos de batalha como General Medieval, ergue a espada sob uma chuva de flechas. Seu estandarte vermelho reúne os guerreiros que ainda resistem ao Paradoxo.</p>
+<dl class="atributos">
+<div>
+<dt>Era</dt>
+<dd>Medieval</dd>
+</div>
+<div>
+<dt>Força</dt>
+<dd>—</dd>
+</div>
+<div>
+<dt>Defesa</dt>
+<dd>2100</dd>
+</div>
+</dl>
+<div class="efeito">
+<h3>Efeitos da carta</h3>
+<p>Para invocar, revele 2 criaturas Medievais de nível 1 da sua mão.</p>
+<p>Ataque seu oponente: descarte 3 cartas do topo do seu deck e cause 1000 de dano para cada criatura Medieval enviada.</p>
+</div>
+<div class="botoes">
+<a href="../produtos.html" class="btn-voltar">Voltar ao catálogo</a>
+<button type="button" class="btn-comprar" data-adicionar="general-valente">Adicionar ao carrinho</button>
+</div>
+<p class="nota-compra">Reúna seus produtos no carrinho e prepare o pedido pelo WhatsApp.</p>
+</div>
 </main>
-<footer class="rodape">&copy; 2026 - Todos os Direitos Reservados</footer>
+<footer class="rodape">
+<p>&copy; 2026 Paradox TCG · Universo fictício para colecionadores.</p>
+<a href="../produtos.html">Explorar produtos</a>
+</footer>
+<p id="aviso-global" class="aviso-global" role="status" aria-live="polite">
+</p>
+<script src="../src/js/catalogo.js" defer>
+</script>
+<script src="../src/js/index.js" defer>
+</script>
 </body>
 </html>

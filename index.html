@@ -4,60 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paradox TCG</title>
+    <title>Paradox TCG | Cartas, decks e novas eras</title><meta name="description" content="Explore o universo fictício de Paradox TCG: cartas colecionáveis, decks, boosters e acessórios."><meta property="og:title" content="Paradox TCG"><meta property="og:description" content="Monte seu deck e domine o Paradoxo."><meta property="og:type" content="website"><meta property="og:locale" content="pt_BR"><meta property="og:image" content="src/img/otimizadas/monte-seu-deck.webp"><meta name="twitter:card" content="summary_large_image"><link rel="icon" href="src/img/otimizadas/logo-paradox.webp" type="image/webp">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+
+
+
 
     <link rel="stylesheet" href="./src/css/reset.css">
     <link rel="stylesheet" href="./src/css/estilos.css">
     <link rel="stylesheet" href="./src/css/home.css">
-    <link rel="stylesheet" href="./src/css/responsivo.css">
+    <link rel="stylesheet" href="./src/css/melhorias.css"><link rel="stylesheet" href="./src/css/responsivo.css">
 </head>
 
-<body>
-    <header class="cabecalho">
-        <nav class="menu-navegacao" aria-label="Navegação principal">
+<body class="pagina-home">
+    <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+    <header class="cabecalho"><nav class="menu-navegacao" aria-label="Navegação principal">
+    <a href="index.html" class="link-logo"><img class="logo" src="src/img/otimizadas/logo-paradox.webp" width="250" height="59" alt="Logo Paradox TCG" loading="eager" decoding="async"></a>
+    <ul class="menu"><li><a href="produtos.html">Produtos</a></li><li><a href="index.html#lancamentos">Lançamentos</a></li><li><a href="index.html#categorias">Categorias</a></li></ul>
+    <form class="form-pesquisa" action="produtos.html" method="get"><input type="search" name="busca" placeholder="Pesquisar produtos" aria-label="Pesquisar produtos"><button type="submit">Pesquisar</button></form>
+    <a href="carrinho-de-compras.html" class="link-carrinho" aria-label="Abrir carrinho de compras"><img class="icone-carrinho" src="src/img/otimizadas/carrinho.webp" width="256" height="256" alt="" loading="eager" decoding="async"><span class="quantidade-carrinho">0</span></a>
+    </nav></header>
 
-            <a href="./index.html" class="link-logo">
-                <img src="./src/img/logo-paradox.png" alt="Logo Paradox TCG" class="logo">
-            </a>
-
-            <ul class="menu">
-                <li>
-                    <a href="./produtos.html">Produtos</a>
-                </li>
-
-                <li>
-                    <a href="#lancamentos">Lançamentos</a>
-                </li>
-
-                <li>
-                    <a href="#categorias">Categorias</a>
-                </li>
-            </ul>
-
-            <form class="form-pesquisa" action="./produtos.html" method="get">
-                <input type="search" id="busca" name="busca" placeholder="Pesquisar produtos"
-                    aria-label="Pesquisar produtos">
-
-                <button type="submit">
-                    Pesquisar
-                </button>
-            </form>
-
-            <a href="./carrinho-de-compras.html" class="link-carrinho" aria-label="Abrir carrinho de compras">
-                <img src="./src/img/carrinho.webp" alt="" class="icone-carrinho">
-
-                <span class="quantidade-carrinho">0</span>
-            </a>
-
-        </nav>
-    </header>
-
-    <main>
+    <main id="conteudo">
         <section class="hero" aria-label="Destaques da loja">
 
             <div class="carrossel">
@@ -110,7 +78,7 @@
                         </p>
 
                         <div class="acoes-slide">
-                            <a href="./produtos.html" class="botao-hero botao-principal">
+                            <a href="./produtos/booster-paradoxo.html" class="botao-hero botao-principal">
                                 Comprar booster box
                             </a>
 
@@ -121,9 +89,8 @@
                     </div>
 
                     <div class="visual-slide">
-                        <img src="./src/img/boosterbox.webp" alt="Caixa de boosters da nova coleção Paradox TCG">
+                        <img src="src/img/otimizadas/boosterbox.webp" width="800" height="880" loading="lazy" decoding="async" alt="Caixa de boosters da nova coleção Paradox TCG">
                     </div>
-
                 </article>
 
                 <article class="slide slide-iniciante">
@@ -144,18 +111,18 @@
                         </p>
 
                         <div class="acoes-slide">
-                            <a href="./produtos.html" class="botao-hero botao-principal">
+                            <a href="./produtos/decks-das-eras.html" class="botao-hero botao-principal">
                                 Conhecer o Starter Deck
                             </a>
 
-                            <a href="./produtos.html" class="botao-hero botao-secundario">
+                            <a href="./produtos.html?categoria=decks" class="botao-hero botao-secundario">
                                 Ver outros decks
                             </a>
                         </div>
                     </div>
 
                     <div class="visual-slide">
-                        <img src="./src/img/starter-deck.png" alt="Starter Deck recomendado para novos jogadores">
+                        <img src="src/img/otimizadas/starter-deck.webp" width="800" height="600" loading="lazy" decoding="async" alt="Starter Deck recomendado para novos jogadores">
                     </div>
 
                 </article>
@@ -190,10 +157,259 @@
 
             </div>
 
+            <a href="#lancamentos" class="seta-rolagem" aria-label="Ir para a seção de últimos lançamentos">
+                <svg aria-hidden="true" viewBox="0 0 24 24">
+                    <path d="M6 9l6 6 6-6"></path>
+                </svg>
+            </a>
+
+        </section>
+
+        <section class="secao-lancamentos" id="lancamentos">
+
+            <div class="conteudo-home">
+
+                <div class="cabecalho-secao">
+
+                    <div>
+                        <span class="etiqueta-secao">Novidades da loja</span>
+
+                        <h2>Últimos lançamentos</h2>
+
+                        <p>
+                            Conheça os produtos mais recentes do universo Paradox TCG.
+                        </p>
+                    </div>
+
+                    <a href="./produtos.html?ordem=lancamentos" class="link-ver-todos">
+                        Ver todos
+                        <span aria-hidden="true">→</span>
+                    </a>
+
+                </div>
+
+                <div class="lista-lancamentos">
+
+                    <article class="card-lancamento card-lancamento-destaque">
+
+                        <a href="./produtos/booster-paradoxo.html" class="link-card-lancamento">
+
+                            <div class="imagem-lancamento">
+
+                                <span class="selo-lancamento">
+                                    Novo
+                                </span>
+
+                                <img src="src/img/otimizadas/boosterbox.webp" width="800" height="880" loading="lazy" decoding="async" alt="Booster Box Paradoxo">
+
+                            </div>
+
+                            <div class="informacoes-lancamento">
+
+                                <span class="tipo-produto">
+                                    Booster Box
+                                </span>
+
+                                <h3>Coleção Ruptura do Paradoxo</h3>
+
+                                <p>
+                                    Uma caixa completa com 24 boosters e cartas
+                                    de diferentes eras.
+                                </p>
+
+                                <div class="rodape-card-lancamento">
+
+                                    <strong>R$ 289,90</strong>
+
+                                    <span class="chamada-card">
+                                        Ver produto
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </a>
+
+                    </article>
+
+                    <article class="card-lancamento">
+
+                        <a href="./produtos/decks-das-eras.html" class="link-card-lancamento">
+
+                            <div class="imagem-lancamento">
+
+                                <span class="selo-lancamento">
+                                    Iniciante
+                                </span>
+
+                                <img src="src/img/otimizadas/starter-deck.webp" width="800" height="600" loading="lazy" decoding="async" alt="Decks iniciais Era Medieval e Era Cósmica">
+
+                            </div>
+
+                            <div class="informacoes-lancamento">
+
+                                <span class="tipo-produto">
+                                    Starter Deck
+                                </span>
+
+                                <h3>Decks das Eras</h3>
+
+                                <p>
+                                    Baralhos prontos para jogar, disponíveis nas
+                                    versões Medieval e Cósmica.
+                                </p>
+
+                                <div class="rodape-card-lancamento">
+
+                                    <strong>A partir de R$ 89,90</strong>
+
+                                    <span class="chamada-card">
+                                        Ver produto
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </a>
+
+                    </article>
+
+                    <article class="card-lancamento">
+
+                        <a href="./cartas/miku-cosmica.html" class="link-card-lancamento">
+
+                            <div class="imagem-lancamento">
+
+                                <span class="selo-lancamento">
+                                    Exclusiva
+                                </span>
+
+                                <img src="src/img/otimizadas/miku-cosmica.webp" width="679" height="938" loading="lazy" decoding="async" alt="Carta Miku Sinfonia Eterna">
+
+                            </div>
+
+                            <div class="informacoes-lancamento">
+
+                                <span class="tipo-produto">
+                                    Carta avulsa
+                                </span>
+
+                                <h3>Miku Sinfonia Eterna</h3>
+
+                                <p>
+                                    Uma carta Paradoxo especial para colecionadores
+                                    e estratégias cósmicas.
+                                </p>
+
+                                <div class="rodape-card-lancamento">
+
+                                    <strong>R$ 61,89</strong>
+
+                                    <span class="chamada-card">
+                                        Ver produto
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </a>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="secao-categorias" id="categorias">
+
+            <div class="conteudo-home">
+
+                <div class="cabecalho-secao cabecalho-secao-claro">
+
+                    <div>
+                        <span class="etiqueta-secao">Encontre seu produto</span>
+
+                        <h2>Explore por categoria</h2>
+
+                        <p>
+                            Escolha uma categoria e encontre os produtos
+                            ideais para sua coleção.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="grade-categorias">
+
+                    <a href="./produtos.html?categoria=cartas" class="categoria-home categoria-cartas">
+                        <img src="src/img/otimizadas/categorias/cartas.webp" width="800" height="800" loading="lazy" decoding="async" alt="">
+
+                        <div class="conteudo-categoria">
+                            <span>Colecione e jogue</span>
+                            <h3>Cartas avulsas</h3>
+                        </div>
+                    </a>
+
+                    <a href="./produtos.html?categoria=boosters" class="categoria-home categoria-boosters">
+                        <img src="src/img/otimizadas/categorias/boosters.webp" width="800" height="800" loading="lazy" decoding="async" alt="">
+
+                        <div class="conteudo-categoria">
+                            <span>Abra novas possibilidades</span>
+                            <h3>Boosters</h3>
+                        </div>
+                    </a>
+
+                    <a href="./produtos.html?categoria=decks" class="categoria-home categoria-decks">
+                        <img src="src/img/otimizadas/categorias/decks.webp" width="800" height="600" loading="lazy" decoding="async" alt="">
+
+                        <div class="conteudo-categoria">
+                            <span>Prontos para jogar</span>
+                            <h3>Decks iniciais</h3>
+                        </div>
+                    </a>
+
+                    <a href="./produtos.html?categoria=deckboxes" class="categoria-home categoria-deckboxes">
+                        <img src="src/img/otimizadas/categorias/deckboxes.webp" width="800" height="800" loading="lazy" decoding="async" alt="">
+
+                        <div class="conteudo-categoria">
+                            <span>Proteja seu baralho</span>
+                            <h3>Deckboxes</h3>
+                        </div>
+                    </a>
+
+                    <a href="./produtos.html?categoria=sleeves" class="categoria-home categoria-sleeves">
+                        <img src="src/img/otimizadas/categorias/sleeves.webp" width="800" height="800" loading="lazy" decoding="async" alt="">
+
+                        <div class="conteudo-categoria">
+                            <span>Estilo e proteção</span>
+                            <h3>Sleeves</h3>
+                        </div>
+                    </a>
+
+                    <a href="./produtos.html?categoria=acessorios" class="categoria-home categoria-acessorios">
+                        <img src="src/img/otimizadas/categorias/acessorios.webp" width="800" height="800" loading="lazy" decoding="async" alt="">
+
+                        <div class="conteudo-categoria">
+                            <span>Complete sua experiência</span>
+                            <h3>Acessórios</h3>
+                        </div>
+                    </a>
+
+                </div>
+
+            </div>
+
         </section>
     </main>
 
-    <footer class="rodape">&copy; 2026 - Todos os Direitos Reservados</footer>
+    <footer class="rodape"><p>&copy; 2026 Paradox TCG · Universo fictício para colecionadores.</p><a href="produtos.html">Explorar produtos</a></footer>
+    <p id="aviso-global" class="aviso-global" role="status" aria-live="polite"></p>
+    <script src="src/js/catalogo.js" defer></script><script src="src/js/index.js" defer></script>
 </body>
 
 </html>

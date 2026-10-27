@@ -3,3 +3,6 @@
 *.sqlite
 *.json
 *.wsuo
+backups/
+qa-artifacts/
+__pycache__/
